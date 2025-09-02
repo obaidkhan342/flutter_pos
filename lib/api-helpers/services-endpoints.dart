@@ -15,4 +15,7 @@ class SEP {
   static const String categoryList = 'pos/Api/category_list';
   static const String updateCategory = 'pos/Api/update_category?';
   static const String deleteCategory = 'pos/Api/delete_category?';
+  static const String addUnit = 'pos/Api/insert_unit?';
+  static const String deleteUnit = 'pos/Api/delete_unit?';
+  static const String unitList = 'pos/Api/unit_list';
 }
