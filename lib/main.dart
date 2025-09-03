@@ -6,7 +6,8 @@ import 'package:pos/page-and-routes/routes.dart';
 import 'package:pos/providers/cusomters/add-update-customer-provider.dart';
 import 'package:pos/providers/cusomters/fetch-customers-provider.dart';
 import 'package:pos/providers/login/login-provider.dart';
-import 'package:pos/providers/products/category-provider.dart';
+import 'package:pos/providers/products/category/category-provider.dart';
+import 'package:pos/providers/products/unit/unit-provider.dart';
 import 'package:pos/utils/color/color-constant.dart';
 import 'package:pos/view/user-panel/home/home_screen.dart';
 import 'package:provider/provider.dart';
@@ -21,6 +22,7 @@ void main() async {
         ChangeNotifierProvider(create: (context) => CustomerProvider()),
         ChangeNotifierProvider(create: (context) => AddCustomerProvider()),
         ChangeNotifierProvider(create: (context) => CategoryProvider()),
+        ChangeNotifierProvider(create: (context) => UnitProvider()),
       ],
       child: MyApp(),
     ),

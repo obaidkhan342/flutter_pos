@@ -6,11 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:pos/models/customer/customer-model.dart';
 import 'package:pos/models/products/category-model.dart';
 import 'package:pos/page-and-routes/routes-name.dart';
-import 'package:pos/providers/products/category-provider.dart';
-import 'package:pos/view/product-ui/add-category-screen.dart';
+import 'package:pos/providers/products/category/category-provider.dart';
+import 'package:pos/view/product-ui/category/add-category-screen.dart';
 import 'package:provider/provider.dart';
 
-import '../../utils/animatedDialog.dart';
+import '../../../utils/animatedDialog.dart';
 
 class CategoryScreen extends StatefulWidget {
   const CategoryScreen({super.key});
@@ -40,7 +40,20 @@ class _CategoryScreenState extends State<CategoryScreen> {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Manage Category", style: TextStyle(fontSize: 20)),
+          title: Text(
+            "Manage Category",
+            style: TextStyle(
+              fontSize: 22,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+          ),
           actions: [
             IconButton(
               onPressed: () async {
@@ -268,9 +281,6 @@ class _CategoryScreenState extends State<CategoryScreen> {
             category.category_id as String,
             context,
           );
-          //   if (success) {
-          //     await provider.fetchCategory();
-          //   }
         }
       },
     );

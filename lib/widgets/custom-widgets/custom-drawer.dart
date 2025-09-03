@@ -2,8 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:pos/providers/login/login-provider.dart';
-import 'package:pos/view/product-ui/add-category-screen.dart';
-import 'package:pos/view/product-ui/category-screen.dart';
+import 'package:pos/view/product-ui/category/add-category-screen.dart';
+import 'package:pos/view/product-ui/unit/add-unit.dart';
+import 'package:pos/view/product-ui/category/category-screen.dart';
+import 'package:pos/view/product-ui/unit/units-screen.dart';
 import 'package:provider/provider.dart';
 
 class CustomDrawer extends StatefulWidget {
@@ -186,6 +188,15 @@ class _CustomDrawerState extends State<CustomDrawer> {
                             ),
                           ),
                           ListTile(
+                            onTap: () {
+                              Navigator.pop(context);
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => AddUnitScreen(),
+                                ),
+                              );
+                            },
                             title: Text(
                               "Add Unit",
                               style: TextStyle(
@@ -195,6 +206,15 @@ class _CustomDrawerState extends State<CustomDrawer> {
                             ),
                           ),
                           ListTile(
+                            onTap: () {
+                              Navigator.pop(context);
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => UnitScreen(),
+                                ),
+                              );
+                            },
                             title: Text(
                               "Unit List",
                               style: TextStyle(

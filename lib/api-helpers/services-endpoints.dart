@@ -18,4 +18,5 @@ class SEP {
   static const String addUnit = 'pos/Api/insert_unit?';
   static const String deleteUnit = 'pos/Api/delete_unit?';
   static const String unitList = 'pos/Api/unit_list';
+  static const String updateUnit = 'pos/Api/update_unit?';
 }
